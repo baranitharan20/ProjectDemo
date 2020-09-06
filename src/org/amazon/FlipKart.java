@@ -21,6 +21,10 @@ public class FlipKart {
 
 		WebElement btnbutton = driver.findElement(By.xpath("//button[@class='_2AkmmA _29YdH8']"));
 		btnbutton.click();
+		
+		
+		String currentUrl = driver.getCurrentUrl();
+		System.out.println(currentUrl);
 
 		WebElement Action = driver.findElement(By.xpath("//span[contains(text(),'Electronics')]"));
 		Actions acc = new Actions(driver);
@@ -29,6 +33,9 @@ public class FlipKart {
 		WebElement options = driver.findElement(By.xpath("//a[contains(text(),'iPhone SE')]"));
 		options.click();
 		Thread.sleep(2000);
+		
+		WebElement clickphone = driver.findElement(By.xpath("//div[contains(text(),'Apple iPhone SE (Black, 64 GB)')]"));
+		clickphone.click();
 
 		List<WebElement> count = driver.findElements(By.className("_3wU53n"));
 		System.out.println(count.size());
